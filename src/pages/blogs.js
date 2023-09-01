@@ -1,12 +1,12 @@
-import React from 'react';
-import Text from './text';
+import React from "react";
+import Text from "./text";
 
 const Blogs = () => {
-	return (
-		<>
-			<Text/>
-		</>
-	);
+  return (
+    <>
+      <Text />
+    </>
+  );
 };
 
 export default Blogs;

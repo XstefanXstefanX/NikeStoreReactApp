@@ -1,29 +1,30 @@
-import React from 'react';
-import {Nav, NavLink, NavMenu } from './NavbarElements';
-
+import React from "react";
+import { NavLink as Link } from "react-router-dom";
+import "./NavBarElements.css";
 const Navbar = () => {
-    return (
-        <div>
-            <Nav id='navbar'>
-                <NavMenu>
-                    <NavLink to="/index" >
-                        Home
-                    </NavLink>
-                    <NavLink to='/about' >
-                        About
-                    </NavLink>
-                    <NavLink to='/contact' >
-                        Contact Us
-                    </NavLink>
-                    <NavLink to='/blogs' >
-                        Blogs
-                    </NavLink>
-                    <NavLink to='/sign-up' >
-                        Sign Up
-                    </NavLink>
-                </NavMenu>
-            </Nav>
-        </div>
-    )
+  const NavLink = Link;
+  return (
+    <div>
+      <nav>
+        <navMenu>
+          <NavLink to="/index" className="nav-link">
+            Home
+          </NavLink>
+          <NavLink to="/about" className="nav-link">
+            About
+          </NavLink>
+          <NavLink to="/contact" className="nav-link">
+            Contact Us
+          </NavLink>
+          <NavLink to="/blogs" className="nav-link">
+            Blogs
+          </NavLink>
+          <NavLink to="/sign-up" className="nav-link">
+            Sign Up
+          </NavLink>
+        </navMenu>
+      </nav>
+    </div>
+  );
 };
 export default Navbar;
