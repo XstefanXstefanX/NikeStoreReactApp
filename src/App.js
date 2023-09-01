@@ -10,7 +10,7 @@ const SignUp = lazy(()=> import("./pages/signup").then(module=>{
 	return { default: module.SignUp }
 	})
 );
-const Contact = lazy(()=> wait(1000).then(() => import("./pages/contact")));
+const Contact = lazy(()=> import("./pages/contact"));
 
 
 
@@ -32,10 +32,4 @@ function App() {
 		
 	);
 }
-function wait(time){
-	return new Promise(resolve =>{
-		setTimeout(resolve,time)
-	});
-};
-
 export default App;
