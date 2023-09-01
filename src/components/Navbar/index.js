@@ -3,9 +3,12 @@ import {Nav, NavLink, NavMenu } from './NavbarElements';
 
 const Navbar = () => {
     return (
-        <>
-            <Nav>
+        <div>
+            <Nav id='navbar'>
                 <NavMenu>
+                    <NavLink to="/index" activeStyle>
+                        Home
+                    </NavLink>
                     <NavLink to='/about' activeStyle>
                         About
                     </NavLink>
@@ -20,7 +23,7 @@ const Navbar = () => {
                     </NavLink>
                 </NavMenu>
             </Nav>
-        </>
+        </div>
     )
 };
 export default Navbar;
