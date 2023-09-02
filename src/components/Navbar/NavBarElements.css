@@ -1,24 +1,29 @@
 nav {
+  display: none;
   background: pink;
-  height: 100px;
-  width: 100vw;
-  display: flex;
-  z-index: 12;
+  height: 100vh;
+  width: 220px;
+  z-index: 999;
 }
-navMenu {
+nav-menu {
+  border-radius: 50%;
+  padding: 2rem 1rem;
   width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 .nav-link {
   color: #000;
   font-size: 1.5rem;
   font-family: monospace;
-  display: flex;
-  align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   cursor: pointer;
+  transition: all 250ms ease;
   &.active {
     color: rebeccapurple;
     font-weight: bold;

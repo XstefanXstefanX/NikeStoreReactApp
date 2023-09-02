@@ -1,12 +1,20 @@
 import React from "react";
+import { useState } from "react";
 import { NavLink as Link } from "react-router-dom";
 import "./NavBarElements.css";
 const Navbar = () => {
   const NavLink = Link;
+  const [showNav, setShowNav] = useState(true);
   return (
     <div>
-      <nav>
-        <navMenu>
+      <button
+        className={`button ${showNav ? "no-show" : ""}`}
+        onClick={() => setShowNav(!showNav)}
+      >
+        Toggle SideBar
+      </button>
+      <nav className={`${showNav ? "show" : ""}`}>
+        <nav-menu>
           <NavLink to="/index" className="nav-link">
             Home
           </NavLink>
@@ -22,7 +30,10 @@ const Navbar = () => {
           <NavLink to="/sign-up" className="nav-link">
             Sign Up
           </NavLink>
-        </navMenu>
+          <button className="button" onClick={() => setShowNav(!showNav)}>
+            Toggle SideBar
+          </button>
+        </nav-menu>
       </nav>
     </div>
   );
