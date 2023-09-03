@@ -26,7 +26,5 @@
 }
 .router-container {
   width: 100vw;
-  display: grid;
-  grid-template-columns: 220px 1fr;
   height: 100vh;
 }

@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import "./App.css";
+import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const Home = lazy(() => import("./pages/index"));
@@ -16,6 +17,7 @@ function App() {
   return (
     <Router>
       <div className="router-container">
+        <Sidebar />
         <Navbar />
         <Suspense fallback={<h1>Loading...</h1>}>
           <Routes>
