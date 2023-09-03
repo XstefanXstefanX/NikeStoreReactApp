@@ -4,11 +4,11 @@ import { NavLink as Link } from "react-router-dom";
 import "./NavBarElements.css";
 const Navbar = () => {
   const NavLink = Link;
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(false);
   return (
     <div>
       <button
-        className={`button ${showNav ? "no-show" : ""}`}
+        className={`side-bar-toggle button ${showNav ? "no-show" : ""}`}
         onClick={() => setShowNav(!showNav)}
       >
         Toggle SideBar

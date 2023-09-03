@@ -1,9 +1,11 @@
 nav {
   display: none;
+  position: fixed;
   background: pink;
   height: 100vh;
   width: 220px;
   z-index: 999;
+  border-right: 15px double black;
 }
 nav-menu {
   border-radius: 50%;
@@ -29,4 +31,10 @@ nav-menu {
     font-weight: bold;
     font-size: 1.75rem;
   }
+}
+.side-bar-toggle {
+  position: absolute;
+  top: 50%;
+  left: 110px;
+  transform: translate(-50%, -50%);
 }

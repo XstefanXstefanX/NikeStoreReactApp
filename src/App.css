@@ -9,7 +9,6 @@
   font-size: 1rem;
   border-radius: 10px;
   padding: 0.25rem;
-  margin: 1rem;
   border: 1px solid black;
   color: black;
   transition: all 250ms ease;
@@ -24,4 +23,10 @@
 
 .no-show {
   display: none;
+}
+.router-container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  height: 100vh;
 }
