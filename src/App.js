@@ -1,22 +1,31 @@
+import Loading from "./pages/pagesLoading";
 import React, { lazy, Suspense } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-const Home = lazy(() => import("./pages/index"));
-const About = lazy(() => import("./pages/about"));
-const Blogs = lazy(() => import("./pages/blogs"));
+const Home = lazy(() => wait(2000).then(() => import("./pages/index")));
+const About = lazy(() => wait(2000).then(() => import("./pages/about")));
+const Blogs = lazy(() => wait(2000).then(() => import("./pages/blogs")));
+const Contact = lazy(() => wait(2000).then(() => import("./pages/contact")));
 const SignUp = lazy(() =>
-  import("./pages/signup").then((module) => {
-    return { default: module.SignUp };
-  })
+  wait(2000).then(() =>
+    import("./pages/signup").then((module) => {
+      return { default: module.SignUp };
+    })
+  )
 );
-const Contact = lazy(() => import("./pages/contact"));
+
+function wait(time) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+}
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/index" element={<Home />} />
           <Route path="/about" element={<About />} />
