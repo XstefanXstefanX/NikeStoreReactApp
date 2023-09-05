@@ -26,7 +26,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/index" element={<Home />} />
           <Route path="/about" element={<About />} />
